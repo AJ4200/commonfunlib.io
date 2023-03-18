@@ -6,23 +6,59 @@
   min-height: 100vh;
   background-color: #fff45d;
 }
-
+.backbody
+{
+  margin: 12px;
+  border-radius: 10px;
+  background: #333;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+  font-family: 'Damion', cursive;
+  border: none;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+}
 .header {
-  size: 10px;
   border-radius: 20px;
   display: flex;
   height: 30px;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #d43838;
   box-shadow: 0 5px 5px rgba(74, 27, 206, 0.1);
+  background: #333;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+  font-family: 'Damion', cursive;
+  border: solid;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
 }
+
 
 .logo {
   height: 50px;
 }
 .footer
 {
-  align-content: center;
+   height: 50px; /* set the height of the footer */
+  position: fixed;
+  bottom: 0;
+  width: 97%;
+
+  border-radius: 10px;
+  background: #333;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+  font-family: 'Damion', cursive;
+  border: solid;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+  display: flex; /* add this to make the child elements align horizontally */
+  align-items: center; /* add this to center the child elements vertically */
+  justify-content: center; /* add this to center the child elements horizontally */
 }

@@ -1,21 +1,121 @@
-.navbar{
-    display: flex;
+.navbar{ 
+position: relative;
+height: 70px;
     align-items: center;
+    border-radius: 10px;
+    background: #333;
+   
+    font-family: 'Damion', cursive;
+    border: none;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
+  }
+  .searchbar
+{
+
+
+width: 350px;
+height: 30px;
+border-radius: 10px;
+
+}
+.searchbarbut
+{
+width: auto;
+height: 30px;
+border-radius: 10px;
+background: #333;
+box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+font-family: 'Damion', cursive;
+border: solid;
+font-size: 16px;
+color: rgb(161, 161, 161);
+transition: 500ms;
+}
+.searchbarbut:hover {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+  color: #d6d6d6;
+  transition: 500ms;
+  font-family: 'Damion', cursive;
+}
+  .navbutton {
+    margin: 12px;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    background: #333;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    font-family: 'Damion', cursive;
+    border: none;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
   }
   
-  .navbar-item {
-    margin: 0 10px;
-    font-weight: bold;
-    color: #333333;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
-    border-radius: 50px;
+  .navbutton:hover {
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+    color: #d6d6d6;
+    transition: 500ms;
+    font-family: 'Damion', cursive;
   }
-  .navbar-item.navbutton:hover
-  {
-
-    border: rgb(255, 0, 0); 
-    box-shadow: 20px;
-
+  .javalist {
+    position: absolute;
+    top: 100%;
+    right: 41%;
+    margin: 12px;
+  
+    
+    border-radius: 10px;
+    background: #333;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    font-family: 'Damion', cursive;
+    border: none;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
+  }
+  
+  .javalist li {
+    padding: 5px;
+  }
+  
+  .javalist li:hover {
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+    color: #d6d6d6;
+    transition: 500ms;
+    font-family: 'Damion', cursive;
+  }
+  .apilist {
+    position: absolute;
+    top: 100%;
+right:0%;
+    margin: 12px;
+  
+    
+    border-radius: 10px;
+    background: #333;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    font-family: 'Damion', cursive;
+    border: none;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
+  }
+  
+  .apilist li {
+    padding: 5px;
+  }
+  
+  .apilist li:hover {
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+    color: #d6d6d6;
+    transition: 500ms;
+    font-family: 'Damion', cursive;
   }
