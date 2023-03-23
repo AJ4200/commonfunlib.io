@@ -1,5 +1,6 @@
 .navbar{ 
-position: relative;
+  flex-wrap: nowrap;
+position: inherit;
 height: 70px;
     align-items: center;
     border-radius: 10px;
@@ -15,7 +16,7 @@ height: 70px;
 {
 
 
-width: 350px;
+width: 340px;
 height: 30px;
 border-radius: 10px;
 

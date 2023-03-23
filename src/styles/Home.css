@@ -21,8 +21,9 @@
   transition: 500ms;
 }
 .header {
+  flex-wrap: nowrap;
   border-radius: 20px;
-  display: flex;
+  display: inline-flex;
   height: 30px;
   justify-content: space-between;
   align-items: center;

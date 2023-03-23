@@ -6,63 +6,29 @@ import '../styles/tooltip.css';
 
 function Navbar() {
 
-    const [showTooltip, setShowTooltip] = React.useState(false);
+  return (
 
-    const handleMouseEnter = () => {
-      setShowTooltip(true);
-    }
-  
-    const handleMouseLeave = () => {
-      setShowTooltip(false);
-    }
-    const [showDropdown, setShowDropdown] = React.useState(false);
+    <div className="navbar">
+      <input className="searchbar" type="search" id="search" name="search" ></input>
+      <button type="submit" className="searchbarbut">Go</button>
+      <button className="navbutton">
+        Java
+      </button>
 
-    const btnJava = () => {
-      setShowDropdown(!showDropdown);
-    }
-    const btnApi = () => {
-        setShowDropdown(!showDropdown);
-      }
-    return (
+      <button className="navbutton" >
+        Javascript
+      </button>
+      <button className="navbutton" >
+        Flutter
+      </button>
 
-        <div className="navbar">
-             <input className="searchbar" type="search" id="search" name="search" ></input>
-             <button type="submit" className="searchbarbut">Go</button>
-                <button className="navbutton" onClick={btnJava}>
-                   Java
-                </button>
-               
-                <button className="navbutton" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    Javascript
-                </button>
-                {showTooltip && <div className="tooltip">This feature is still under development!</div>}
-                <button className="navbutton" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    Flutter
-                </button>
-                
-                <button className="navbutton" onClick={btnApi}>
-                    API
-                </button>
-                {showDropdown && (
-        <ul className="javalist">
-          <li>About Java Library</li>
-          <li>Usage</li>
-          <li>Issues</li>
-        </ul>
+      <button className="navbutton">
+        API
+      </button>
+    </div>
 
-      )}
-        {showDropdown && (
-        <ul className="apilist">
-          <li>About API</li>
-          <li>Usage</li>
-          <li>Issues</li>
-        </ul>
-        
-      )}
-        </div>
-       
-    );
-    
+  );
+
 }
 
 
