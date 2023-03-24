@@ -1,0 +1,9 @@
+.lineStyle
+{
+    height: 2px;
+background-color: rgb(204, 204, 204);
+margin: 20px auto;
+width: 15%;
+-ms-flex-align: center;
+box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+}

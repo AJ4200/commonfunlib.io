@@ -1,4 +1,5 @@
 import React from 'react';
+import Line from './components/line';
 import Navbar from './components/Navbar';
 import './styles/Home.css';
 import './styles/loader.css';
@@ -25,6 +26,7 @@ function Homepage() {
     setTimeout(() => setLoading(false), 3000); // Simulate a 2-second loading time
   }, []);
 
+  
   return (
     (
       <div>
@@ -225,36 +227,86 @@ function Homepage() {
           <><header className='header'>
             <Navbar />
           </header>
-              <div className='backbody'>
-                <h1>API Test:</h1>
-                {fetchData}
-                <p className='content'>
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
-                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+            <div className='backbody'>
+              {fetchData}
 
-                </p>
-              </div>
-           
+              <h1 className='content'>CommonFunLib Java Library</h1>
+
+              <Line />
+              <h2 className='content'>CommonFunctions</h2>
+              <Line />
+              <p className='para'>
+
+                The CommonFunctions class provides a collection of commonly used functions for performing mathematical operations and manipulating variables and strings. The following functions are available:</p>
+
+              <ul className='list'>
+                <li>
+                  isEven: Checks if a number is even.
+                </li>
+                <li>
+                  isOdd: Checks if a number is odd.
+                </li>
+                <li>
+                  factorial: Calculates the factorial of a number.
+                </li>
+                <li>
+                  gcd: Calculates the greatest common divisor (GCD) of two numbers.
+                </li>
+                <li>
+                  lcm: Calculates the least common multiple (LCM) of two numbers.
+                </li>
+                <li>
+                  isPrime: Checks if a number is prime.
+                </li>
+                <li>
+                  swapVariableValue: Swaps the values of two variables.
+                </li>
+                <li>
+                  reverseString: Reverses a string.
+                </li>
+              </ul>
+              <Line />
+              <h2 className='content'>Generator</h2>
+              <Line />
+              <p className='para'>
+
+                The Generator class provides functions for generating random numbers and names. The following functions are available:</p>
+
+              <ul className='list'>
+                <li>
+                  generateRandomName: Generates a random name by combining a random first name with a random last name.
+                </li>
+                <li>
+                  generateRandomNumber: Generates a random number between a minimum and maximum value.
+                </li>
+                <li>
+                  generatePassword: Returns auto generate password based on length given.
+                </li>
+
+              </ul>
+              <Line />
+              <h2 className='content'>Hashing</h2>
+              <Line />
+              <p className='para'>
+
+                This Java class provides an implementation of common hashing functions:</p>
+
+              <ul className='list'>
+                <li>
+                  md5: Computes the MD5 hash of a given input string.
+                </li>
+                <li>
+                  sha1: Computes the SHA-1 hash of a given input string.
+                </li>
+                <li>
+                  sha256: Computes the SHA-256 hash of a given input string.
+                </li>
+                <li>
+                  sha512: Computes the SHA-512 hash of a given input string.
+                </li>
+              </ul>
+            </div>
+
 
             <footer className='footer'>CommonFunLib(beta) by JE Productions</footer></>
         )}
