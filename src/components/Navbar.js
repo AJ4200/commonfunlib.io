@@ -9,6 +9,8 @@ function Navbar() {
   return (
 
     <div className="navbar">
+                  <h1>CommonFunLib</h1>
+            <p>(beta)</p>
       <input className="searchbar" type="search" id="search" name="search" ></input>
       <button type="submit" className="searchbarbut">Go</button>
       <button className="navbutton">

@@ -10,9 +10,9 @@ async function fetchData() {
     const data = await response.json();
     console.log(data);
     return data;
-  } catch (error) {  
+  } catch (error) {
     console.error(error);
-     return error;
+    return error;
   }
 
 }
@@ -22,7 +22,7 @@ function Homepage() {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    setTimeout(() => setLoading(false), 3); // Simulate a 2-second loading time
+    setTimeout(() => setLoading(false), 3000); // Simulate a 2-second loading time
   }, []);
 
   return (
@@ -223,14 +223,39 @@ function Homepage() {
 
         ) : (
           <><header className='header'>
-            <h1>CommonFunLib</h1>
-            <p>(beta)</p>
             <Navbar />
           </header>
-            <div className='backbody'>
-              <h1>API Test:</h1>
-              {fetchData}
-            </div>
+              <div className='backbody'>
+                <h1>API Test:</h1>
+                {fetchData}
+                <p className='content'>
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+                  fghvuirhvruigvrhigvhrvgurvhrifgvdfuhvivuhfhvbfcvbvfhvbdcdhcdvufdchfvfvfvhfvfvhfvfvhfvfkvfvkfvkfvscvdhcdchdcdhcdchdchklkdcjkdchdhcdchdh
+
+                </p>
+              </div>
+           
+
             <footer className='footer'>CommonFunLib(beta) by JE Productions</footer></>
         )}
       </div>

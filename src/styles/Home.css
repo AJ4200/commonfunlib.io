@@ -1,31 +1,10 @@
-.Home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #fff45d;
-}
-.backbody
-{
-  margin: 12px;
-  border-radius: 10px;
-  background: #333;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
-  font-family: 'Damion', cursive;
-  border: none;
-  font-size: 16px;
-  color: rgb(161, 161, 161);
-  transition: 500ms;
-}
 .header {
+  display: flex;
+  /* set display to flex */
   flex-wrap: nowrap;
   border-radius: 20px;
-  display: inline-flex;
   height: 30px;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   box-shadow: 0 5px 5px rgba(74, 27, 206, 0.1);
@@ -36,30 +15,65 @@
   font-size: 16px;
   color: rgb(161, 161, 161);
   transition: 500ms;
+  position: fixed;
+  width: 94%;
+  margin-top: -90px;
+
+  
 }
 
+.content {
+  text-align: center;
+  -ms-text-overflow: ellipsis;
+  text-overflow: clip;
 
+}
+
+.backbody {
+  background-color: #575757;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%235a5a5a' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23505050' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23474747' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%233d3d3d' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23333333' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 20px;
+  margin-top: 100px; /* add margin-top to push backbody below the header */
+  height: calc(100vh - 180px); /* adjust the height to fit between header and footer */
+  overflow-y: auto; /* add overflow-y to make the content scrollable */
+  font-family: 'Damion', cursive;
+  border: none;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+}
+
+.backbody::-webkit-scrollbar {
+  display: none;
+}
 .logo {
   height: 50px;
 }
-.footer
-{
-   height: 50px; /* set the height of the footer */
+
+.footer {
+  display: flex;
+  /* set display to flex */
+  flex-wrap: nowrap;
+  height: 50px;
+  /* set the height of the footer */
   position: fixed;
   bottom: 0;
   width: 97%;
-
   border-radius: 10px;
   background: #333;
-  justify-content: center;
-  align-items: center;
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
   font-family: 'Damion', cursive;
   border: solid;
   font-size: 16px;
   color: rgb(161, 161, 161);
   transition: 500ms;
-  display: flex; /* add this to make the child elements align horizontally */
-  align-items: center; /* add this to center the child elements vertically */
-  justify-content: center; /* add this to center the child elements horizontally */
+  display: flex;
+  /* add this to make the child elements align horizontally */
+  align-items: center;
+  /* add this to center the child elements vertically */
+  justify-content: center;
+  /* add this to center the child elements horizontally */
 }
