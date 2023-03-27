@@ -1,0 +1,86 @@
+.list
+{
+  background-color: #222;
+  border: #333;
+  border-style: solid;
+  border-radius: 20px;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+}
+.sect
+{
+    display: flex;
+    flex-direction: row;
+}
+.sect2
+{
+    align-content: space-evenly;
+    padding: 10px;
+    background-color: #222;
+    border: #333;
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    width: 70%;
+}
+.confirm
+{
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    background: #333;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    font-family: 'Damion', cursive;
+    border: solid;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
+}
+.confirm:hover {
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+    color: #d6d6d6;
+    transition: 500ms;
+    font-family: 'Damion', cursive;
+  }
+  .lengthbar
+  {
+    width: auto;
+    height: 20px;
+    border-radius: 10px;
+    background: #1f1f1f;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    font-family: 'Damion', cursive;
+    border: solid;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+
+    transition: 500ms;
+    
+  }
+  .minmax
+  {
+    width: 170px;
+    height: 20px;
+    border-radius: 10px;
+    background: #1f1f1f;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+    font-family: 'Damion', cursive;
+    border: solid;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+
+    transition: 500ms;
+  }
+.selecttype
+{
+  width: 180px;
+  height: 35px;
+  border-radius: 10px;
+  background: #1f1f1f;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+  font-family: 'Damion', cursive;
+  border: solid;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+
+  transition: 500ms;
+}
