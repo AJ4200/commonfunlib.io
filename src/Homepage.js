@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CommonFunctionslist from './components/CommonFunList';
 import Generatorlist from './components/Generatorlist';
 import Hashinglist from './components/HashingList';
@@ -6,20 +6,7 @@ import Line from './components/line';
 import Navbar from './components/Navbar';
 import './styles/Home.css';
 import './styles/loader.css';
-
-
-async function fetchData() {
-  try {
-    const response = await fetch('http://localhost:8080/generatePassword?length=8');
-    const data = await response.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.error(error);
-    return error;
-  }
-
-}
+import ApiInfo from './components/apiInfo';
 
 function Homepage() {
 
@@ -29,6 +16,12 @@ function Homepage() {
     setTimeout(() => setLoading(false), 3000); // Simulate a 2-second loading time
   }, []);
 
+
+  const [showapiInfo, setShowapiInfo] = useState(false);
+
+  const handleToggleBackbody = () => {
+    setShowapiInfo((prevState) => !prevState);
+  };
 
   return (
     (
@@ -229,34 +222,40 @@ function Homepage() {
         ) : (
           <><header className='header'>
             <Navbar />
+            <button className='navbutton' onClick={handleToggleBackbody}>
+              {showapiInfo ? 'Close API' : 'API'}
+            </button>
+
           </header>
-            <div className='backbody'>
-              {fetchData}
+            <div className='container'>
+              {showapiInfo && <ApiInfo />}
+              <div className={`backbody ${showapiInfo ? 'slide-out' : 'slide-in'}`}>
+                <h1>CommonFunLib Java Library</h1>
+                <Line />
+                <h2 className='content'>CommonFunctions</h2>
+                <Line />
+                <p className='para'>
+                  The CommonFunctions class provides a collection of commonly used functions for performing mathematical operations and manipulating variables and strings. The following functions are available:
+                </p>
+                <CommonFunctionslist />
+                <Line />
+                <h2 className='content'>Generator</h2>
+                <Line />
+                <p className='para'>
+                  The Generator class provides functions for generating random numbers and names. The following functions are available:
+                </p>
+                <Generatorlist />
+                <Line />
+                <h2 className='content'>Hashing</h2>
+                <Line />
+                <p className='para'>
+                  This Java class provides an implementation of common hashing functions:
+                </p>
+                <Hashinglist />
 
-              <h1>CommonFunLib Java Library</h1>
-              <Line />
-              <h2 className='content'>CommonFunctions</h2>
-              <Line />
-              <p className='para'>
-
-                The CommonFunctions class provides a collection of commonly used functions for performing mathematical operations and manipulating variables and strings. The following functions are available:</p>
-              <CommonFunctionslist />
-              <Line />
-              <h2 className='content'>Generator</h2>
-              <Line />
-              <p className='para'>
-
-                The Generator class provides functions for generating random numbers and names. The following functions are available:</p>
-              <Generatorlist />
-              <Line />
-              <h2 className='content'>Hashing</h2>
-              <Line />
-              <p className='para'>
-
-                This Java class provides an implementation of common hashing functions:</p>
-              <Hashinglist />
+              </div>
+              {showapiInfo && <ApiInfo />}
             </div>
-
 
             <footer className='footer'>CommonFunLib(beta) by JE Productions</footer></>
         )}

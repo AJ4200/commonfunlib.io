@@ -40,9 +40,7 @@ function Navbar() {
         Flutter
       </button>
       {showTooltip2 && <div className="tooltip">Dart(Flutter) Library is still under development</div>}
-      <button className="navbutton">
-        API
-      </button>
+   
     </div>
 
   );
