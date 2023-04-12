@@ -4,9 +4,12 @@ import Generatorlist from './components/Generatorlist';
 import Hashinglist from './components/HashingList';
 import Line from './components/line';
 import Navbar from './components/Navbar';
+import ApiInfo from './components/apiInfo';
 import './styles/Home.css';
 import './styles/loader.css';
-import ApiInfo from './components/apiInfo';
+import './styles/Navbar.css';
+import './styles/Container.css';
+
 
 function Homepage() {
 
@@ -15,7 +18,6 @@ function Homepage() {
   React.useEffect(() => {
     setTimeout(() => setLoading(false), 3000); // Simulate a 2-second loading time
   }, []);
-
 
   const [showapiInfo, setShowapiInfo] = useState(false);
 
@@ -221,10 +223,19 @@ function Homepage() {
 
         ) : (
           <><header className='header'>
-            <Navbar />
-            <button className='navbutton' onClick={handleToggleBackbody}>
-              {showapiInfo ? 'Close API' : 'API'}
-            </button>
+            <div className="navbar">
+            <h1>CommonFunLib</h1>
+      <p>(beta)</p>
+      <input className="searchbar" type="search" id="search" name="search" ></input>
+      <button type="submit" className="searchbarbut">Go</button>
+      <button className="navbutton">
+        Java
+      </button>
+              <Navbar />
+              <button className='navbutton' onClick={handleToggleBackbody}>
+                {showapiInfo ? 'Close API' : 'API'}
+              </button>
+            </div>
 
           </header>
             <div className='container'>
