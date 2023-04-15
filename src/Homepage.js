@@ -23,7 +23,7 @@ function Homepage() {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    setTimeout(() => setLoading(false), 3000); // Simulate a 2-second loading time
+    setTimeout(() => setLoading(false), 5000); // Simulate a 5-second loading time
   }, []);
 
   const [showapiInfo, setShowapiInfo] = useState(false);
