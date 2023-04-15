@@ -92,6 +92,8 @@
   padding: 5px;
   cursor: pointer;
   transition: 500ms;
+  border-color: #444;
+  border-style: dashed;
   
 }
 

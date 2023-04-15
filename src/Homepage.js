@@ -8,6 +8,7 @@ import "./styles/Home.css";
 import "./styles/loader.css";
 import "./styles/Navbar.css";
 import "./styles/Container.css";
+import "./styles/tooltip.css"
 
 function Homepage() {
   const [showTooltip1, setShowTooltip1] = useState(false);
@@ -35,10 +36,18 @@ function Homepage() {
 
   const downloadFile = () => {
     // Code to download the file goes here
+    const filePath = require('./assets/CommonFunLib.zip');
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = 'CommonFunLib.zip';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const redirectToSite = () => {
     // Code to redirect to the site goes here
+    window.location.href = "https://github.com/AJ4200/CommonFunLib/archive/refs/heads/master.zip";
   };
 
   return (
@@ -277,16 +286,7 @@ function Homepage() {
               </button>
             </div>
           </header>
-          {showTooltip2 && (
-            <div className="tooltip">
-              Dart(Flutter) Library is still under development
-            </div>
-          )}
-          {showTooltip1 && (
-            <div className="tooltip">
-              Javascript Library is still under development
-            </div>
-          )}
+
           {showPopup && (
             <div className="popup">
               <div className="popup-option content" onClick={downloadFile}>
@@ -295,6 +295,16 @@ function Homepage() {
               <div className="popup-option content" onClick={redirectToSite}>
                 Source Code
               </div>
+            </div>
+          )} 
+                   {showTooltip2 && (
+            <div className="tooltip">
+              Dart(Flutter) Library is still under development
+            </div>
+          )}
+          {showTooltip1 && (
+            <div className="tooltip">
+              Javascript Library is still under development
             </div>
           )}
           <div className="container">
