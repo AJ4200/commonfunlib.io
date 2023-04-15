@@ -1,27 +1,32 @@
 import React from 'react';
 import '../styles/Home.css';
+import Line from './line';
 
 function apiInfo() {
   return (
     <div className='backbodyapi'>
-          <h1>Welcome to the CommonFunLib API</h1>
-    <p>
+      <Line/>
+          <h1 className='content'>CommonFunLib-API</h1>
+          <Line/>
+    <p className='para'>
       The CommonFunLib API is a collection of useful functions for common programming tasks. It includes functions for computing mathematical operations, generating random data, and hashing data.
     </p>
-    <h2>API Endpoints</h2>
+    <Line/>
+    <h2 className='content'>API Endpoints</h2>
+    <Line/>
     <ul>
-      <li>
+      <li >
         <h3>Common Functions</h3>
-        <p>
+        <p className='para'>
           The Common Functions endpoint provides functions for computing mathematical operations.
         </p>
-        <p>
+        <p className='para'>
           <strong>Endpoint:</strong> https://commonfunlibapi-apim.azure-api.net/common-functions
         </p>
         <p>
           <strong>Parameters:</strong>
         </p>
-        <ul>
+        <ul className='list'>
           <li>
             <code>type</code> (required): The type of function to compute. Possible values are <code>isEven</code>, <code>isOdd</code>, <code>factorial</code>, <code>gcd</code>, <code>lcm</code>, <code>isPrime</code>, <code>swapVariableValue</code>, and <code>reverseString</code>.
           </li>
@@ -35,16 +40,16 @@ function apiInfo() {
       </li>
       <li>
         <h3>Generator</h3>
-        <p>
+        <p className='para'>
           The Generator endpoint provides functions for generating random data.
         </p>
-        <p>
+        <p className='para'>
           <strong>Endpoint:</strong> https://commonfunlibapi-apim.azure-api.net/generatePassword
         </p>
         <p>
           <strong>Parameters:</strong>
         </p>
-        <ul>
+        <ul className='list'>
           <li>
             <code>length</code> (required): The length of the generated password.
           </li>
@@ -52,16 +57,16 @@ function apiInfo() {
       </li>
       <li>
         <h3>Hashing</h3>
-        <p>
+        <p className='para'>
           The Hashing endpoint provides functions for hashing data.
         </p>
-        <p>
+        <p className='para'>
           <strong>Endpoint:</strong> https://commonfunlibapi-apim.azure-api.net/hash
         </p>
         <p>
           <strong>Parameters:</strong>
         </p>
-        <ul>
+        <ul className='list'>
           <li>
             <code>type</code> (required): The type of hash function to use. Possible values are <code>md5</code>, <code>sha1</code>, <code>sha256</code>, and <code>sha512</code>.
           </li>

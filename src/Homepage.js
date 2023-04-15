@@ -25,6 +25,16 @@ function Homepage() {
     setShowapiInfo((prevState) => !prevState);
   };
 
+  const [showPopup, setShowPopup] = useState(false);
+
+  const downloadFile = () => {
+    // Code to download the file goes here
+  };
+
+  const redirectToSite = () => {
+    // Code to redirect to the site goes here
+  };
+
   return (
     (
       <div>
@@ -224,13 +234,25 @@ function Homepage() {
         ) : (
           <><header className='header'>
             <div className="navbar">
-            <h1>CommonFunLib</h1>
-      <p>(beta)</p>
-      <input className="searchbar" type="search" id="search" name="search" ></input>
-      <button type="submit" className="searchbarbut">Go</button>
-      <button className="navbutton">
-        Java
+              <h1>CommonFunLib</h1>
+              <p>(beta)</p>
+              <input className="searchbar" type="search" id="search" name="search" ></input>
+              <button type="submit" className="searchbarbut">Go</button>
+             
+      <button className="navbutton" onClick={() => setShowPopup(true)}>
+        Download
       </button>
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-option" onClick={downloadFile}>
+            Library Files
+          </div>
+          <div className="popup-option" onClick={redirectToSite}>
+            Source Code
+          </div>
+        </div>
+      )}
+  
               <Navbar />
               <button className='navbutton' onClick={handleToggleBackbody}>
                 {showapiInfo ? 'Close API' : 'API'}
