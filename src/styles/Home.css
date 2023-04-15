@@ -51,9 +51,7 @@ body::-webkit-scrollbar {
   padding-left: 15px;
   padding-top: 10px;
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    inset -5px -5px 10px #222;   
 }
 
 .backbody {
