@@ -5,11 +5,16 @@
   border-style: solid;
   border-radius: 20px;
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+  opacity: 80%;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 }
 .sect
 {
     display: flex;
     flex-direction: row;
+ 
+ 
 }
 .sect2
 {
@@ -21,6 +26,9 @@
     border-radius: 20px;
     box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
     width: 70%;
+    opacity: 80%;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
 }
 .confirm
 {
@@ -55,6 +63,14 @@
 
     transition: 500ms;
     
+  }
+  .lengthbar:active
+  {
+    font-family: 'Damion', cursive;
+    border: solid;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    border-radius: 10px;
   }
   .minmax
   {

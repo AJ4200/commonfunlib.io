@@ -1,13 +1,12 @@
 import React from 'react';
 import '../styles/Home.css';
 import Line from './line';
+import CopyToClipboardButton from './api/CopyToCliboard';
 
 function apiInfo() {
   return (
-    <div className='backbodyapi'>
-      <Line/>
-          <h1 className='content'>CommonFunLib-API</h1>
-          <Line/>
+    <div className='backbodyapi slide-inapi '>
+          <h1 className='content'>CommonFunLib API [For All]</h1>      
     <p className='para'>
       The CommonFunLib API is a collection of useful functions for common programming tasks. It includes functions for computing mathematical operations, generating random data, and hashing data.
     </p>
@@ -22,6 +21,7 @@ function apiInfo() {
         </p>
         <p className='para'>
           <strong>Endpoint:</strong> https://commonfunlibapi-apim.azure-api.net/common-functions
+          <CopyToClipboardButton text={"https://commonfunlibapi-apim.azure-api.net/common-functions"} />
         </p>
         <p>
           <strong>Parameters:</strong>

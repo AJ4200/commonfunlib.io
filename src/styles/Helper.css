@@ -1,0 +1,6 @@
+.bold{
+    color: rgb(201, 201, 201);
+    font-size: calc(auto + 15px);
+   opacity: 80%;
+   stroke-width: 0;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/list.css';
+import '../styles/Helper.css';
 import CopyToClipboardButton from './api/CopyToCliboard';
 
 function Hashinglist() {
@@ -29,10 +30,10 @@ function Hashinglist() {
     <div className='sect'>
       <section>
         <ul className='list'>
-          <li>md5: Computes the MD5 hash of a given input string.</li>
-          <li>sha1: Computes the SHA-1 hash of a given input string.</li>
-          <li>sha256: Computes the SHA-256 hash of a given input string.</li>
-          <li>sha512: Computes the SHA-512 hash of a given input string.</li>
+          <li><strong className='bold'>md5:</strong> Computes the MD5 hash of a given input string.</li>
+          <li><strong className='bold'>sha1:</strong> Computes the SHA-1 hash of a given input string.</li>
+          <li><strong className='bold'>sha256:</strong> Computes the SHA-256 hash of a given input string.</li>
+          <li><strong className='bold'>sha512:</strong> Computes the SHA-512 hash of a given input string.</li>
         </ul></section>
 
       <section className='sect2'>
