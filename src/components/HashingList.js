@@ -20,7 +20,7 @@ function Hashinglist() {
 
   const handleComputeHash = async () => {
     setLoading(true);
-    const response = await axios.get(`https://commonfunlibapi.azurewebsites.net/hash?type=${hashType}&input=${input}`);
+    const response = await axios.get(`https://api-commonfunlib.onrender.com/hash/${hashType}?input=${input}`);
     setHash(response.data.hash);
     setLoading(false);
   };

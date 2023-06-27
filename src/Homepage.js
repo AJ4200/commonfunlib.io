@@ -9,6 +9,7 @@ import "./styles/loader.css";
 import "./styles/Navbar.css";
 import "./styles/Container.css";
 import "./styles/tooltip.css"
+import Converterlist from "./components/Converterlist";
 
 function Homepage() {
   const [showTooltip1, setShowTooltip1] = useState(false);
@@ -332,13 +333,21 @@ function Homepage() {
               </p>
               <Generatorlist />
               <Line />
+              <h2 className="content">Converting</h2>
+              <Line />
+              <p className="para">
+                This Java class provides an implementation of converting
+                functions:
+              </p>
+              <Converterlist/>
+              <Line />
               <h2 className="content">Hashing</h2>
               <Line />
               <p className="para">
                 This Java class provides an implementation of common hashing
                 functions:
               </p>
-              <Hashinglist />
+              <Hashinglist />        
             </div>
             {showapiInfo && <ApiInfo />}
           </div>

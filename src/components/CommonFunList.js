@@ -24,8 +24,20 @@ function CommonFunctionslist() {
 
   const handleComputeFunction = async () => {
     setLoading(true);
-    const response = await axios.get(`http://localhost:8080/common-functions?type=${functionType}&input1=${input1}&input2=${input2}`);
-    setResult(response.data.result);
+    let apiUrl = `https://api-commonfunlib.onrender.com/common/`;
+
+    if (functionType === 'even' || functionType === 'odd') {
+      apiUrl += `${functionType}?num=${input1}`;
+    } else if (functionType === 'factorial' || functionType === 'reverse') {
+      apiUrl += `${functionType}?num=${input1}`;
+    } else if (functionType === 'gcd' || functionType === 'lcm') {
+      apiUrl += `${functionType}?a=${input1}&b=${input2}`;
+    } else if (functionType === 'prime') {
+      apiUrl += `${functionType}?num=${input1}`;
+    }
+
+    const response = await axios.get(apiUrl);
+    setResult(response.data[functionType]);
     setLoading(false);
   };
 
@@ -47,14 +59,13 @@ function CommonFunctionslist() {
         <h3>Compute Function</h3>
         <select className='selecttype' value={functionType} onChange={handleFunctionTypeChange}>
           <option value=''>Select function type</option>
-          <option value='isEven'>Is Even</option>
-          <option value='isOdd'>Is Odd</option>
+          <option value='even'>Is Even</option>
+          <option value='odd'>Is Odd</option>
           <option value='factorial'>Factorial</option>
           <option value='gcd'>GCD</option>
           <option value='lcm'>LCM</option>
-          <option value='isPrime'>Is Prime</option>
-          <option value='swapVariableValue'>Swap Variable Value</option>
-          <option value='reverseString'>Reverse String</option>
+          <option value='prime'>Is Prime</option>
+          <option value='reverse'>Reverse String</option>
         </select>
         <input
           type='text'
@@ -63,18 +74,20 @@ function CommonFunctionslist() {
           onChange={handleInput1Change}
           placeholder='Enter input 1'
         />
-        <input
-          type='text'
-          className='minmax'
-          value={input2}
-          onChange={handleInput2Change}
-          placeholder='Enter input 2 (if applicable)'
-        />
+        {functionType === 'gcd' || functionType === 'lcm' ? (
+          <input
+            type='text'
+            className='minmax'
+            value={input2}
+            onChange={handleInput2Change}
+            placeholder='Enter input 2'
+          />
+        ) : null}
         <button className='confirm' onClick={handleComputeFunction}>
           Compute
         </button>
         <CopyToClipboardButton text={result} />
-        <p>{loading ? 'Loading...' : result || 'No result computed yet.'}</p>
+        <p>{loading ? 'Loading...' : (result !== undefined ? `Result: ${result}` : 'No result computed yet.')}</p>
       </section>
     </div>
   );
