@@ -10,6 +10,7 @@ import "./styles/Navbar.css";
 import "./styles/Container.css";
 import "./styles/tooltip.css"
 import Converterlist from "./components/Converterlist";
+import Hexloader from "./components/hexloader";
 
 function Homepage() {
   const [showTooltip1, setShowTooltip1] = useState(false);
@@ -54,7 +55,7 @@ function Homepage() {
   return (
     <div>
       {loading ? (
-<hexloader/>
+<Hexloader/>
       ) : (
         <>
           <header className="header">

@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-function hexloader() {
-    return (         <div class="socket">
+function Hexloader() {
+  return (<div class="socket">
     <div class="gel center-gel">
       <div class="hex-brick h1"></div>
       <div class="hex-brick h2"></div>
@@ -190,7 +190,7 @@ function hexloader() {
       <div class="hex-brick h2"></div>
       <div class="hex-brick h3"></div>
     </div>
-  </div> );
+  </div>);
 }
 
-export default hexloader;
+export default Hexloader;
