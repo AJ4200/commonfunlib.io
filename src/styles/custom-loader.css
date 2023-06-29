@@ -1,0 +1,13 @@
+.custom-loader {
+  width:60px;
+  height:30px;
+  border-radius:100px 100px 0 0;
+  -webkit-mask:repeating-radial-gradient(farthest-side at bottom ,#0000 0,#000 0.5px 12%,#0000 calc(12% + 0.5px) 20%);
+  background:
+   radial-gradient(farthest-side at bottom,#A1A1A1 0 95%,#0000 0) bottom/0% 0% no-repeat
+   #4D4D50;
+  animation:p10 1s infinite steps(6);
+}
+@keyframes p10 {
+    100% {background-size:120% 120%}
+}

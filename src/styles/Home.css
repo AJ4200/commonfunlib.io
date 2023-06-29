@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  /* set display to flex */
   flex-wrap: nowrap;
   border-radius: 20px;
   height: 30px;
@@ -9,8 +8,7 @@
   padding: 20px;
   box-shadow: 0 5px 5px rgba(74, 27, 206, 0.1);
   background: #333;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
   font-family: "Damion", cursive;
   border: solid;
   font-size: 16px;
@@ -20,19 +18,16 @@
   width: 93.9%;
   margin-top: -90px;
 }
+
 @media screen and (max-width: 768px) {
-  /* adjust the styling for screens smaller than 768px */
-  .footer {
-    height: 80px;
-    /* increase the height of the footer */
+  .header {
+    height: auto;
     flex-direction: column;
-    /* make the child elements stack vertically */
-    justify-content: center;
-    /* center the child elements vertically */
-    text-align: center;
-    /* center the child elements horizontally */
+    align-items: center;
+    padding: 10px;
   }
 }
+
 h1 {
   text-align: center;
 }
@@ -40,14 +35,14 @@ h1 {
 body::-webkit-scrollbar {
   display: none;
 }
+
 .content {
   text-align: center;
   transition: box-shadow 1000ms;
 }
 
 .content:hover {
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
 }
 
 .content:not(:hover) {
@@ -62,74 +57,62 @@ body::-webkit-scrollbar {
   border-radius: 20px;
   padding-left: 15px;
   padding-top: 10px;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;   
-    opacity: 80%;
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+  opacity: 80%;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 }
 
 .backbody {
   background-size: auto;
   background-color: #333;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='66' height='66' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%231e1e1e' fill-opacity='0.59'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.59'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
-
   position: relative;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
-
   scroll-behavior: smooth;
   border-radius: 20px;
   margin-top: 100px;
-  /* add margin-top to push backbody below the header */
   height: calc(100vh - 180px);
-  /* adjust the height to fit between header and footer */
   overflow-y: auto;
-  /* add overflow-y to make the content scrollable */
   font-family: "Damion", cursive;
   border: rgb(161, 161, 161);
   border-style: solid;
   font-size: 16px;
   color: rgb(161, 161, 161);
   transition: 500ms;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
 }
-.backbodyapi
-{
+
+.backbodyapi {
   background-size: auto;
   background-color: #333;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='66' height='66' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%231e1e1e' fill-opacity='0.59'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.59'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
-
   position: relative;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
-
-
   scroll-behavior: smooth;
   border-radius: 20px;
   margin-top: 100px;
-  /* add margin-top to push backbody below the header */
   height: calc(100vh - 180px);
-  /* adjust the height to fit between header and footer */
   overflow-y: auto;
-  /* add overflow-y to make the content scrollable */
   font-family: "Damion", cursive;
   border: rgb(161, 161, 161);
   border-style: solid;
   font-size: 16px;
   color: rgb(161, 161, 161);
   transition: 500ms;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
 }
+
 .backbody::-webkit-scrollbar {
   display: none;
 }
+
 .backbodyapi::-webkit-scrollbar {
   display: none;
 }
-/*Animation trans*/
+
 .slide-inapi {
   animation-name: slide-inapi;
 }
@@ -155,7 +138,7 @@ body::-webkit-scrollbar {
     left: -100%;
   }
 }
-/*Animation trans Main*/
+
 .slide-in {
   animation-name: slide-in;
 }
@@ -188,26 +171,46 @@ body::-webkit-scrollbar {
 
 .footer {
   display: flex;
-  /* set display to flex */
   flex-wrap: nowrap;
   height: 50px;
-  /* set the height of the footer */
   position: fixed;
   bottom: 0;
   width: 97%;
   border-radius: 10px;
   background: #333;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
-    inset -5px -5px 10px #222;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
   font-family: "Damion", cursive;
   border: solid;
   font-size: 16px;
   color: rgb(161, 161, 161);
   transition: 500ms;
   display: flex;
-  /* add this to make the child elements align horizontally */
   align-items: center;
-  /* add this to center the child elements vertically */
   justify-content: center;
-  /* add this to center the child elements horizontally */
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .footer {
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .backbody,
+  .backbodyapi {
+    margin-top: 50px;
+    height: calc(100vh - 130px);
+  }
+
+  .backbodyapi {
+    margin-top: 50px;
+    height: calc(100vh - 130px);
+  }
 }
